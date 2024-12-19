@@ -1,38 +1,53 @@
-
 <template>
-  <h1>Связаться с нами</h1>
-  <form @submit.prevent="submitForm">
-    <div>
-      <input type="name" placeholder="Имя" name="name" v-model="name" required />
-    </div>
-    <div>
-      <input class="required-input" type="phone" placeholder="Номер телефона" name="phone" v-model="phone" required />
-    </div>
-    <div>
-      <input class="required-input" type="email" placeholder="Email" name="email" v-model="email" required />
-    </div>
-    <div>
-      <input type="text" placeholder="Интересующий товар/услуга" name="subject" v-model="subject" required />
-    </div>
+  <div class="header-form-container">
+    <h1>Связаться с нами</h1>
+    <div class="form-image-container">
+      <div class="form-container">
+        <form @submit.prevent="submitForm">
+          <div>
+            <input type="name" placeholder="Имя" name="name" v-model="name" required />
+          </div>
+          <div>
+            <input class="required-input" type="phone" placeholder="Номер телефона" name="phone" v-model="phone"
+              required />
+          </div>
+          <div>
+            <input class="required-input" type="email" placeholder="Email" name="email" v-model="email" required />
+          </div>
+          <div>
+            <input type="text" placeholder="Интересующий товар/услуга" name="subject" v-model="subject" required />
+          </div>
 
-    <div>
-      <textarea name="message" rows="6" placeholder="Сообщение" v-model="message" required></textarea>
-    </div>
+          <div>
+            <textarea name="message" rows="6" placeholder="Сообщение" v-model="message" required></textarea>
+          </div>
 
-    <p class="privacy-policy">Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</p>
-    <button class="submit-button" type="submit">Отправить <i class="fas fa-arrow-right"></i></button>
-    
-  </form>
+          <p class="privacy-policy">Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</p>
+          <button class="submit-button" type="submit">Отправить <i class="fas fa-arrow-right"></i></button>
+        </form>
+      </div>
+      <div class="image-container"><img class="man-image" src="./assets/onthephone.png"
+          alt="The man is talking on the phone"></div>
+    </div>
+  </div>
 </template>
 
 <style scoped>
+.form-image-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100vw;
+}
 
-
-
+.man-image {
+  max-width: 749px;
+}
 
 .privacy-policy {
   color: red;
 }
+
 .submit-button {
   background-color: #333333;
   width: 222px;
@@ -48,8 +63,8 @@
 
   display: flex;
   align-items: center;
-  justify-content: center; 
-  gap: 12px; 
+  justify-content: center;
+  gap: 12px;
 }
 
 .submit-button:hover {
