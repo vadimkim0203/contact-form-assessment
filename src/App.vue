@@ -20,7 +20,7 @@
     </div>
 
     <p class="privacy-policy">Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</p>
-    <button class="submit-button" type="submit">Отправить</button>
+    <button class="submit-button" type="submit">Отправить <i class="fas fa-arrow-right"></i></button>
     
   </form>
 </template>
@@ -28,20 +28,28 @@
 <style scoped>
 
 
+
+
 .privacy-policy {
   color: red;
 }
 .submit-button {
   background-color: #333333;
-  width:222px;
+  width: 222px;
   height: 71px;
   color: white;
-  padding: 15px 20px;
-  font-size: 16px;
+  padding: 24px 47px;
+  font-size: 12px;
+  font-weight: 400;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 12px; 
 }
 
 .submit-button:hover {

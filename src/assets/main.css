@@ -1,5 +1,12 @@
+@font-face {
+  font-family: 'TT Hoves Pro';  /* Font name */
+  src: url('@/assets/fonts/TT Hoves Pro Trial Refular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1{
-  font: TT Hoves;
+  font: "TT Hoves Pro";
   font-weight: 300;
   size: 64px;
   color: #bdbdbd;
