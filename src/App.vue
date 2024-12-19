@@ -1,4 +1,5 @@
 <template>
+  <h1>Связаться с нами</h1>
   <form @submit.prevent="submitForm">
     <div>
       <input
