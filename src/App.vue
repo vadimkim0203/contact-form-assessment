@@ -1,5 +1,7 @@
 <template>
-  <h1>Связаться с нами</h1>
+  <div class="header-container">
+    <h1>Связаться с нами</h1>
+  </div>
   <div class="form-image-container">
     <form @submit.prevent="submitForm">
 
@@ -13,7 +15,7 @@
 
 
 
-      <input class="required-input" type="email" placeholder="E-mail*" name="email" v-model="email" required/>
+      <input class="required-input" type="email" placeholder="E-mail*" name="email" v-model="email" required />
 
 
       <input type="text" placeholder="Интересующий товар/услуга" name="subject" v-model="subject" required />
@@ -40,6 +42,10 @@
 </template>
 
 <style scoped>
+.header-container {
+  margin-top: 0;
+}
+
 .form-image-container {
   display: flex;
   flex-direction: row;
@@ -47,6 +53,7 @@
   height: 369px;
   gap: 30px;
   padding-right: 0px;
+  margin-bottom: 20px;
 }
 
 .image-container {
@@ -55,14 +62,23 @@
   overflow: hidden;
 }
 
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .privacy-policy-container {
+  font-weight: 400;
+  font-size: 14px;
+
   width: 331px;
   height: 34px;
   margin-left: 40px;
-  margin-top: 22px;
 }
 
 .submit-button {
+  font-family: "TT Hoves";
   font-size: 12px;
   font-weight: 400;
   background-color: #333333;
@@ -86,54 +102,6 @@
   width: 24px;
   height: 24px;
 }
-
-
-/* .required-input-wrapper {
-  position:relative
-}
-
-.required-star {
-  position:absolute;
-  color: red;
-}
-
-.required-star-phone {
-  left: 183px;
-  top: 195px;
-}
-
-.required-star-email {
-  left: 97px;
-  top: 259px; 
-}
-
-.required-star-message {
-  left: 141px;
-  top: 387px; 
-}
-
-
-.form-image-container {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  width: 100vw;
-}
-
-.man-image {
-  max-width: 749px;
-}
-
-
-.privacy-policy {
-  color: red;
-}
-
-
-
-.submit-button:hover {
-  background-color: #666666;
-} */
 </style>
 
 <script>
