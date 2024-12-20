@@ -7,7 +7,7 @@ body {
 }
 
 @font-face {
-  font-family: 'TT Hoves Pro';  /* Font name */
+  font-family: 'TT Hoves Pro';
   src: url('@/assets/fonts/TT Hoves Pro Trial Refular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -18,6 +18,7 @@ h1{
   font-weight: 300;
   size: 64px;
   color: #bdbdbd;
+  display: flex;
 }
 
 form {
@@ -35,10 +36,10 @@ textarea {
   width: 100%;
   padding: 15px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 4px;
   font-size: 16px;
-  background-color: f5f5f5;
+  background-color: #f5f5f5;
 }
 
 input::placeholder,
@@ -49,8 +50,6 @@ textarea::placeholder {
 input:focus, 
 textarea:focus {
   outline:none;
-  border-color: #333;
-  background-color: white;
 };
 
 #privacy-policy {
@@ -60,20 +59,6 @@ textarea:focus {
   margin-top: 10px;
 };
 
-
-div {
-  margin-bottom: 15px;
-}
-
-textarea {
-  resize: none;
-}
-
-form {
-  box-sizing: border-box;
-  align-items: stretch;
-  gap: 20px;
-};
 
 
 

@@ -7,19 +7,23 @@
           <div>
             <input type="name" placeholder="Имя" name="name" v-model="name" required />
           </div>
-          <div>
+          <div class="input-wrapper">
+            <div class="required-input-wrapper">
             <input class="required-input" type="phone" placeholder="Номер телефона" name="phone" v-model="phone"
-              required />
+              required /></div>
+              <span class="required-star required-star-phone">*</span>
           </div>
-          <div>
+          <div class="input-wrapper">
             <input class="required-input" type="email" placeholder="Email" name="email" v-model="email" required />
+            <span class="required-star required-star-email">*</span>
           </div>
           <div>
             <input type="text" placeholder="Интересующий товар/услуга" name="subject" v-model="subject" required />
           </div>
 
-          <div>
-            <textarea name="message" rows="6" placeholder="Сообщение" v-model="message" required></textarea>
+          <div class="input-wrapper">
+            <textarea class="required-input" name="message" rows="6" placeholder="Сообщение" v-model="message" required></textarea>
+            <span class="required-star required-star-message">*</span>
           </div>
 
           <p class="privacy-policy">Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</p>
@@ -33,6 +37,32 @@
 </template>
 
 <style scoped>
+
+.required-input-wrapper {
+  position:relative
+}
+
+.required-star {
+  position:absolute;
+  color: red;
+}
+
+.required-star-phone {
+  left: 183px;
+  top: 195px;
+}
+
+.required-star-email {
+  left: 97px;
+  top: 259px; 
+}
+
+.required-star-message {
+  left: 141px;
+  top: 387px; 
+}
+
+
 .form-image-container {
   display: flex;
   flex-direction: row;
@@ -43,6 +73,7 @@
 .man-image {
   max-width: 749px;
 }
+
 
 .privacy-policy {
   color: red;
