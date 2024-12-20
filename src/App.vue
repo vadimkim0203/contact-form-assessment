@@ -8,25 +8,12 @@
       <div class="input-container">
         <input type="name" placeholder="Имя" name="name" v-model="name" required />
       </div>
-
-
-
       <input class="required-input" type="phone" placeholder="Номер телефона*" name="phone" v-model="phone" required />
-
-
-
       <input class="required-input" type="email" placeholder="E-mail*" name="email" v-model="email" required />
-
-
       <input type="text" placeholder="Интересующий товар/услуга" name="subject" v-model="subject" required />
-
-
-
       <textarea class="required-input" name="message" rows="6" placeholder="Сообщение*" v-model="message"
         required></textarea>
-
     </form>
-
     <div class="image-container"><img src="./assets/onthephone.png" alt="The man is talking on the phone"></div>
   </div>
   <div class="privacy-policy-container">
@@ -78,7 +65,7 @@
 }
 
 .submit-button {
-  font-family: "TT Hoves";
+  font-family: "TT Hoves", sans-serif;
   font-size: 12px;
   font-weight: 400;
   background-color: #333333;
@@ -96,6 +83,7 @@
   position: absolute;
   bottom: 0px;
   left: 0px;
+  letter-spacing: 0.2em;
 }
 
 .arrow-container {
